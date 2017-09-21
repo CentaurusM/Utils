@@ -1,1 +1,3 @@
+```
 nvidia-smi --query-gpu=timestamp,temperature.gpu,fan.speed,utilization.gpu,utilization.memory,memory.total,memory.free,memory.used,pcie.link.width.current,pcie.link.width.max,power.draw,clocks.current.video,gom.current,pstate,clocks_throttle_reasons.active,clocks_throttle_reasons.sw_power_cap,clocks_throttle_reasons.hw_slowdown,encoder.stats.sessionCount,encoder.stats.averageFps,encoder.stats.averageLatency --format=csv  -l
+```
