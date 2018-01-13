@@ -1,5 +1,5 @@
 
-## auto mount
+## Auto mount a device
 ```
 echo /dev/nvme0n1p1 /mnt ext4 defaults 0 0 >> /etc/fstab
 ```
@@ -11,7 +11,23 @@ apt-get insall sysstat
 sar 1 3
 
 
-## CentOS 7 下，设置DNS服务器
+## Axel Download Accelerator
+
+```
+# Debian or Ubuntu
+apt-get install axel
+
+# CentOS
+yum install epel-release
+yum install axel  
+
+# Downloading with Axel
+axel -n 10  http://hammurabi.acc.umu.se/debian-cd/6.0.6/amd64/iso-cd/debian-6.0.6-amd64-netinst.iso
+
+```
+
+
+## DNS setting in CentOS 7
 
 使用命令行修改
 ```
