@@ -6,9 +6,30 @@ echo /dev/nvme0n1p1 /mnt ext4 defaults 0 0 >> /etc/fstab
 
 ## Performance Monitor (SAR)
 
+* Install and Use SAR
+```
 apt-get insall sysstat
 
 sar 1 3
+
+```
+
+* Visulize SAR log
+1. ksar
+2. sarviz
+
+
+
+
+## Show history with data & Time
+```
+echo 'export HISTTIMEFORMAT="%d/%m/%y %T "' >> ~/.bash_profile
+source ~/.bash_profile
+
+# Other parameters
+export HISTFILESIZE=500000000
+export HISTSIZE=1000000
+```
 
 
 ## Axel Download Accelerator
