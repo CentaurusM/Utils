@@ -1,4 +1,19 @@
 
+# Install Docker 
+```
+curl -fsSL https://get.docker.com/ | sh
+service docker start
+```
+
+# Change Docker Root
+```
+docker info | grep "Docker Root Dir"
+service docker stop
+
+mv /var/lib/docker /root/data/docker
+ln -s /root/data/docker /var/lib/docker
+```
+
 # A list of the basic Docker commands
 
 ```bash
