@@ -12,6 +12,16 @@ apt-get insall sysstat
 
 sar 1 3
 
+# sar log dir
+cd /var/log/sa/
+
+# Adjust period of collecting logs
+vim /etc/cron.d/sysstat
+
+*/10 * * * * root /usr/lib64/sa/sa1 1 1
+# 0 * * * * root /usr/lib64/sa/sa1 600 6 &
+# Generate a daily summary of process accounting at 23:53
+53 23 * * * root /usr/lib64/sa/sa2 -A
 ```
 
 * Visualize SAR log
