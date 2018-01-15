@@ -14,7 +14,7 @@ sar 1 3
 
 ```
 
-* Visulize SAR log
+* Visualize SAR log
 1. ksar https://github.com/CentaurusM/python-sarviz
 2. sarviz https://github.com/CentaurusM/python-sarviz
 
@@ -26,8 +26,8 @@ echo 'export HISTTIMEFORMAT="%d/%m/%y %T "' >> ~/.bash_profile
 source ~/.bash_profile
 
 # Other parameters
-export HISTFILESIZE=500000000
-export HISTSIZE=1000000
+export HISTFILESIZE=50000000
+export HISTSIZE=100000
 ```
 
 
