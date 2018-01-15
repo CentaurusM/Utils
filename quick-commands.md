@@ -20,10 +20,11 @@ sar 1 3
 
 
 ## Configure SSH with X11 Forwarding 
+```
 # /etc/ssh/sshd_config
 X11Forwarding yes
 yum install  xorg-x11-xauth
-
+```
 
 ## Show "history" with Data & Time
 ```
