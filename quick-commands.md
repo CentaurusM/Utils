@@ -1,5 +1,5 @@
 
-## Auto mount a device
+## Auto Mount a Device
 ```
 echo /dev/nvme0n1p1 /mnt ext4 defaults 0 0 >> /etc/fstab
 ```
@@ -19,8 +19,13 @@ sar 1 3
 2. sarviz https://github.com/CentaurusM/python-sarviz
 
 
+## Configure SSH with X11 Forwarding 
+# /etc/ssh/sshd_config
+X11Forwarding yes
+yum install  xorg-x11-xauth
 
-## Show history with data & Time
+
+## Show "history" with Data & Time
 ```
 echo 'export HISTTIMEFORMAT="%d/%m/%y %T "' >> ~/.bash_profile
 source ~/.bash_profile
@@ -47,7 +52,7 @@ axel -n 10  http://hammurabi.acc.umu.se/debian-cd/6.0.6/amd64/iso-cd/debian-6.0.
 ```
 
 
-## DNS setting in CentOS 7
+## DNS Setting in CentOS 7
 
 1. Using nmcli tools
 ```
