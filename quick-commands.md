@@ -44,6 +44,7 @@ source ~/.bash_profile
 # Other parameters
 export HISTFILESIZE=50000000
 export HISTSIZE=100000
+export PROMPT_COMMAND="history -a"        #实时记录历史命令，防止丢失 
 ```
 
 
