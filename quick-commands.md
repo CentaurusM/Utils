@@ -97,3 +97,10 @@ nameserver 8.8.8.8
 
 ```
 
+## Route Trace - BestTrace
+```
+wget https://cdn.ipip.net/17mon/besttrace4linux.zip
+unzip besttrace4linux.zip
+chmod +x besttrace
+./besttrace -q 1 IP
+```
