@@ -29,6 +29,17 @@ vim /etc/cron.d/sysstat
 2. sarviz https://github.com/CentaurusM/python-sarviz
 
 
+## CPU Turbo 
+```
+yum install ncurses-devel ncurses
+git clone https://github.com/ajaiantilal/i7z.git
+
+cd i7z
+make
+./i7z
+
+```
+
 ## Configure SSH with X11 Forwarding 
 ```
 # /etc/ssh/sshd_config
