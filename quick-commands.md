@@ -115,3 +115,5 @@ unzip besttrace4linux.zip
 chmod +x besttrace
 ./besttrace -q 1 IP
 ```
+## PCI passthrough in centos
+http://www.hanbaoying.com/2017/02/21/pci-passthrough-in-centos.html
