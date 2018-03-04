@@ -117,3 +117,53 @@ chmod +x besttrace
 ```
 ## PCI passthrough in centos
 http://www.hanbaoying.com/2017/02/21/pci-passthrough-in-centos.html
+
+
+## shadowsocks linux 
+1. client
+``` 
+yum install python-pip
+pip install shadowsocks
+nohup sslocal -s your_server_ip -p your_server_port -l 1080 -k your_server_passwd -t 600 -m your_encrypt-method > /dev/null 2>&1 &
+
+# or
+sslocal -c ss.json
+
+{
+    "server":"your_server_ip",      #ss服务器IP
+    "server_port":your_server_port, #端口
+    "local_address": "127.0.0.1",   #本地ip
+    "local_port":1080,              #本地端口
+    "password":"your_server_passwd",#连接ss密码
+    "timeout":300,                  #等待超时
+    "method":"rc4-md5",             #加密方式
+    "fast_open": false,             # true 或 false。如果你的服务器 Linux 内核在3.7+，可以开启 fast_open 以降低延迟。开启方法： echo 3 > /proc/sys/net/ipv4/tcp_fastopen 开启之后，将 fast_open 的配置设置为 true 即可
+    "workers": 1                    # 工作线程数
+}
+
+yum install privoxy
+
+vim /usr/etc/privoxy/config
+
+#edit /etc/privoxy/config
+listen-address 127.0.0.1:8118
+forward-socks5t / 127.0.0.1:1080 .
+#end edit
+
+systemctl start privoxy
+
+vim /etc/profile
+export http_proxy=http://127.0.0.1:8118
+export https_proxy=http://127.0.0.1:8118
+export ftp_proxy=http://127.0.0.1:8118
+
+source /etc/profile
+curl www.google.com
+
+```
+
+
+
+```
+
+2. server
