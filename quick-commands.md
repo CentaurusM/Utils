@@ -163,13 +163,8 @@ curl www.google.com
 ```
 
 
-
-```
-
-2. server
-
-
 ## disk 性能测试
+
 ```
 /dev/vdb为测试卷的挂载路径，查看命令为lsblk
 fio -ioengine=libaio -group_reporting -direct=1 -rw=write -bs=128k -iodepth=32 -size=100G  -name=/dev/vdb
