@@ -167,3 +167,14 @@ curl www.google.com
 ```
 
 2. server
+
+
+## disk 性能测试
+```
+/dev/vdb为测试卷的挂载路径，查看命令为lsblk
+fio -ioengine=libaio -group_reporting -direct=1 -rw=write -bs=128k -iodepth=32 -size=100G  -name=/dev/vdb
+fio -ioengine=libaio -group_reporting -direct=1 -rw=randwrite -bs=4k -iodepth=128 -runtime=300 -time_based -size=100G -name=/dev/vdb
+fio -ioengine=libaio -group_reporting -direct=1 -rw=randread -bs=4k -iodepth=128 -runtime=300 -time_based -size=100G -name=/dev/vdb
+fio -ioengine=libaio -group_reporting -direct=1 -rw=write -bs=1024k -iodepth=32 -runtime=300 -time_based -size=100G -name=/dev/vdb
+fio -ioengine=libaio -group_reporting -direct=1 -rw=read -bs=1024k -iodepth=32 -runtime=300 -time_based -size=100G -name=/dev/vdb
+```
