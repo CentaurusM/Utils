@@ -11,3 +11,7 @@ tar xvf mesa
 
 scons
 ```
+
+# ref
+[1]. https://www.opengl.org/discussion_boards/showthread.php/199121-Mesa3d-installing-for-Windows-10/page2
+[2]. https://github.com/pal1000/mesa-dist-win/releases
