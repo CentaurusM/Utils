@@ -1,8 +1,8 @@
 
-## login your NGC
+## log in your NGC
 
 1. install nvidia-docker, see ```../install-cuda-docker.sh```
-2. login ngc
+2. log in ngc
 
 ```sh
 # For the username, enter '$oauthtoken' exactly as shown. It is a special authentication token for all users.
