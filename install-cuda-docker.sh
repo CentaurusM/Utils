@@ -8,6 +8,10 @@ sudo apt update
 sudo apt upgrade -y
 sudo apt install cuda -y
 
+# Install docker via mirrors: modify "mirrors" in get-docker.sh
+#curl -fsSL get.docker.com -o get-docker.sh
+#sh get-docker.sh
+
 # Install docker
 sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
