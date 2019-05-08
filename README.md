@@ -11,3 +11,6 @@ https://arxiv.org/pdf/1605.07678.pdf
 https://www.topbots.com/how-solve-memory-challenges-deep-learning-neural-networks-graphcore/
 
 https://zhuanlan.zhihu.com/chroot
+
+
+https://its.shenzhen.chinatax.gov.cn/nsqdsq.html
